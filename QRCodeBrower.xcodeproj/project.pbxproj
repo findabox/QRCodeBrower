@@ -13,6 +13,9 @@
 		15348A201D1CE06A0058449B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15348A1E1D1CE06A0058449B /* Main.storyboard */; };
 		15348A221D1CE06A0058449B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15348A211D1CE06A0058449B /* Assets.xcassets */; };
 		15348A251D1CE06A0058449B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15348A231D1CE06A0058449B /* LaunchScreen.storyboard */; };
+		153632671D2122970080E922 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153632661D2122970080E922 /* QRCodeViewController.m */; };
+		15ADF6F41D214964008315D1 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 15ADF6F31D214964008315D1 /* DismissSegue.m */; };
+		377DEA44ABB613678B17954F /* libPods-QRCodeBrower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CA7F78AD248615F477E69F /* libPods-QRCodeBrower.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		15348A211D1CE06A0058449B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15348A241D1CE06A0058449B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15348A261D1CE06A0058449B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		153632651D2122970080E922 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		153632661D2122970080E922 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		15ADF6F21D214964008315D1 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		15ADF6F31D214964008315D1 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		28CA7F78AD248615F477E69F /* libPods-QRCodeBrower.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCodeBrower.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2979CB389FFA75FAD28CD79E /* Pods-QRCodeBrower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeBrower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeBrower/Pods-QRCodeBrower.debug.xcconfig"; sourceTree = "<group>"; };
+		7DC5EA4A44CEB22BE05574A5 /* Pods-QRCodeBrower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeBrower.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeBrower/Pods-QRCodeBrower.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377DEA44ABB613678B17954F /* libPods-QRCodeBrower.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012754C0290341B1322A1D46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2979CB389FFA75FAD28CD79E /* Pods-QRCodeBrower.debug.xcconfig */,
+				7DC5EA4A44CEB22BE05574A5 /* Pods-QRCodeBrower.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		15348A091D1CE06A0058449B = {
 			isa = PBXGroup;
 			children = (
 				15348A141D1CE06A0058449B /* QRCodeBrower */,
 				15348A131D1CE06A0058449B /* Products */,
+				012754C0290341B1322A1D46 /* Pods */,
+				80E4B577E05B1C71F53C6187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +80,14 @@
 		15348A141D1CE06A0058449B /* QRCodeBrower */ = {
 			isa = PBXGroup;
 			children = (
+				15ADF6F21D214964008315D1 /* DismissSegue.h */,
+				15ADF6F31D214964008315D1 /* DismissSegue.m */,
 				15348A181D1CE06A0058449B /* AppDelegate.h */,
 				15348A191D1CE06A0058449B /* AppDelegate.m */,
 				15348A1B1D1CE06A0058449B /* ViewController.h */,
 				15348A1C1D1CE06A0058449B /* ViewController.m */,
+				153632651D2122970080E922 /* QRCodeViewController.h */,
+				153632661D2122970080E922 /* QRCodeViewController.m */,
 				15348A1E1D1CE06A0058449B /* Main.storyboard */,
 				15348A211D1CE06A0058449B /* Assets.xcassets */,
 				15348A231D1CE06A0058449B /* LaunchScreen.storyboard */,
@@ -79,6 +105,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		80E4B577E05B1C71F53C6187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28CA7F78AD248615F477E69F /* libPods-QRCodeBrower.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15348A291D1CE06A0058449B /* Build configuration list for PBXNativeTarget "QRCodeBrower" */;
 			buildPhases = (
+				8EE934B273D1DC1185D8478E /* Check Pods Manifest.lock */,
 				15348A0E1D1CE06A0058449B /* Sources */,
 				15348A0F1D1CE06A0058449B /* Frameworks */,
 				15348A101D1CE06A0058449B /* Resources */,
+				09B7D6798BC6D8738EB0E135 /* Embed Pods Frameworks */,
+				F14390D3520029646DDCB77C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +182,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09B7D6798BC6D8738EB0E135 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeBrower/Pods-QRCodeBrower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EE934B273D1DC1185D8478E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F14390D3520029646DDCB77C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeBrower/Pods-QRCodeBrower-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15348A0E1D1CE06A0058449B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +237,8 @@
 			files = (
 				15348A1D1D1CE06A0058449B /* ViewController.m in Sources */,
 				15348A1A1D1CE06A0058449B /* AppDelegate.m in Sources */,
+				15ADF6F41D214964008315D1 /* DismissSegue.m in Sources */,
+				153632671D2122970080E922 /* QRCodeViewController.m in Sources */,
 				15348A171D1CE06A0058449B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +351,7 @@
 		};
 		15348A2A1D1CE06A0058449B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2979CB389FFA75FAD28CD79E /* Pods-QRCodeBrower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRCodeBrower/Info.plist;
@@ -275,6 +363,7 @@
 		};
 		15348A2B1D1CE06A0058449B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC5EA4A44CEB22BE05574A5 /* Pods-QRCodeBrower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRCodeBrower/Info.plist;
@@ -303,6 +392,7 @@
 				15348A2B1D1CE06A0058449B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

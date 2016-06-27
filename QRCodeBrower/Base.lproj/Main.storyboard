@@ -28,18 +28,21 @@
                                         </constraints>
                                         <state key="normal" title="QR"/>
                                         <connections>
-                                            <segue destination="yev-be-h4h" kind="show" id="8Dt-U7-MTS"/>
+                                            <segue destination="Qvo-sf-map" kind="show" id="yjS-jD-Ojs"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rws-Pa-aby">
                                         <rect key="frame" x="53" y="43" width="376" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ovP-ba-rym"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L7-Rh-YIk">
                                         <rect key="frame" x="8" y="47" width="37" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htC-Dv-cgB">
@@ -48,7 +51,19 @@
                                             <constraint firstAttribute="width" constant="30" id="6TP-al-nc9"/>
                                         </constraints>
                                         <state key="normal" title="Go"/>
+                                        <connections>
+                                            <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CT5-xC-USW"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTv-Xi-Hvq">
+                                        <rect key="frame" x="481" y="47" width="65" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="hAq-Kd-KyQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -56,13 +71,16 @@
                                     <constraint firstItem="4L7-Rh-YIk" firstAttribute="top" secondItem="zCR-Ay-M3b" secondAttribute="top" constant="47" id="4Jo-L6-fI9"/>
                                     <constraint firstItem="9hk-NH-iE5" firstAttribute="leading" secondItem="htC-Dv-cgB" secondAttribute="trailing" constant="82" id="6Xh-Bw-Elm"/>
                                     <constraint firstAttribute="height" constant="73" id="87Z-sW-jTh"/>
+                                    <constraint firstAttribute="bottom" secondItem="VTv-Xi-Hvq" secondAttribute="bottom" constant="5" id="HJ9-So-Om4"/>
                                     <constraint firstItem="9hk-NH-iE5" firstAttribute="top" secondItem="zCR-Ay-M3b" secondAttribute="top" constant="43" id="JS5-E6-nOu"/>
                                     <constraint firstItem="rws-Pa-aby" firstAttribute="leading" secondItem="4L7-Rh-YIk" secondAttribute="trailing" constant="8" id="NA3-KL-YhD"/>
                                     <constraint firstItem="rws-Pa-aby" firstAttribute="top" secondItem="zCR-Ay-M3b" secondAttribute="top" constant="43" id="You-dR-RsD"/>
                                     <constraint firstAttribute="bottom" secondItem="9hk-NH-iE5" secondAttribute="bottom" id="dIZ-CE-plx"/>
+                                    <constraint firstItem="VTv-Xi-Hvq" firstAttribute="top" secondItem="zCR-Ay-M3b" secondAttribute="top" constant="47" id="esu-Xz-2lh"/>
                                     <constraint firstItem="4L7-Rh-YIk" firstAttribute="leading" secondItem="zCR-Ay-M3b" secondAttribute="leading" constant="8" id="fPn-PL-vZ8"/>
                                     <constraint firstAttribute="bottom" secondItem="4L7-Rh-YIk" secondAttribute="bottom" constant="5" id="gPp-36-fx9"/>
                                     <constraint firstAttribute="bottom" secondItem="rws-Pa-aby" secondAttribute="bottom" id="lcf-GF-2pv"/>
+                                    <constraint firstItem="9hk-NH-iE5" firstAttribute="leading" secondItem="VTv-Xi-Hvq" secondAttribute="trailing" constant="8" id="nvm-zu-R4P"/>
                                     <constraint firstItem="htC-Dv-cgB" firstAttribute="top" secondItem="zCR-Ay-M3b" secondAttribute="top" constant="43" id="uEx-4K-Dff"/>
                                     <constraint firstAttribute="trailing" secondItem="9hk-NH-iE5" secondAttribute="trailing" constant="16" id="uvy-2p-Tzv"/>
                                     <constraint firstItem="htC-Dv-cgB" firstAttribute="leading" secondItem="rws-Pa-aby" secondAttribute="trailing" constant="13" id="wgu-mG-bFs"/>
@@ -71,6 +89,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-oW-Lx5">
                                 <rect key="frame" x="0.0" y="81" width="600" height="519"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gDg-yr-OIK"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -88,6 +109,7 @@
                         <outlet property="goButton" destination="htC-Dv-cgB" id="oIZ-eg-0iT"/>
                         <outlet property="headBarView" destination="zCR-Ay-M3b" id="uBK-pK-1Wu"/>
                         <outlet property="qrButton" destination="9hk-NH-iE5" id="j24-Ni-lEn"/>
+                        <outlet property="status" destination="VTv-Xi-Hvq" id="WPv-xV-8YO"/>
                         <outlet property="uiwebView" destination="pnI-oW-Lx5" id="pa1-sA-qjD"/>
                         <outlet property="urlAddress" destination="rws-Pa-aby" id="gzl-pD-nHf"/>
                     </connections>
@@ -96,10 +118,26 @@
             </objects>
             <point key="canvasLocation" x="305" y="357"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="oNz-qQ-WaQ">
+            <objects>
+                <navigationController id="Qvo-sf-map" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SZ8-If-cSC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yev-be-h4h" kind="relationship" relationship="rootViewController" id="R7u-UW-U21"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAC-9D-bfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="357"/>
+        </scene>
+        <!--Code View Controller-->
         <scene sceneID="s5D-mw-QHd">
             <objects>
-                <viewController id="yev-be-h4h" sceneMemberID="viewController">
+                <viewController id="yev-be-h4h" customClass="QRCodeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Qs-Mk-j0b"/>
                         <viewControllerLayoutGuide type="bottom" id="dsO-1d-EJg"/>
@@ -109,10 +147,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qV3-IL-Hac">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="w1y-aS-B1C">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" id="ZOb-DG-Cjc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OzK-7V-aJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="357"/>
+            <point key="canvasLocation" x="1754" y="343"/>
         </scene>
     </scenes>
 </document>
