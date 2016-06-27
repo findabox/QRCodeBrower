@@ -20,6 +20,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.uiwebView];
     [self addObserver:self forKeyPath:@"url" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(goWithNotificationURL:) name:@"QRCodeValueKey" object:nil];
     self.url = @"http://www.baidu.com";
     [self goURLWithString:self.url];
     // Do any additional setup after loading the view, typically from a nib.
@@ -27,6 +28,11 @@
 
 - (IBAction)goAction:(id)sender {
     [self goURLWithString:self.urlAddress.text];
+}
+
+- (void)goWithNotificationURL:(NSNotification *)notification {
+    NSString *str = notification.object;
+    [self goURLWithString:str];
 }
 
 - (void)goURLWithString:(NSString *)urlString {
@@ -63,6 +69,15 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
     self.status.text = @"Error";
+    NSString *errorMessage = [NSString stringWithFormat:@"url: %@\n error:%@",
+                              self.urlAddress.text,
+                              [error.userInfo objectForKey:@"NSLocalizedDescription"]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message: errorMessage
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end
