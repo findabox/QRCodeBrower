@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.uiwebView];
+    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.uiwebView loadRequest:request];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

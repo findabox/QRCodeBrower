@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIWebViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *headBarView;
+@property (weak, nonatomic) IBOutlet UITextField *urlAddress;
+@property (weak, nonatomic) IBOutlet UIButton *qrButton;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
+@property (weak, nonatomic) IBOutlet UIWebView *uiwebView;
 
 @end
 
