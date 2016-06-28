@@ -31,8 +31,8 @@
 }
 
 - (void)goWithNotificationURL:(NSNotification *)notification {
-    NSString *str = notification.object;
-    [self goURLWithString:str];
+    self.url = notification.object;
+    [self goURLWithString:self.url];
 }
 
 - (void)goURLWithString:(NSString *)urlString {
