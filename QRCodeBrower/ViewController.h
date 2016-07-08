@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NJKWebViewProgress/NJKWebViewProgress.h>
 
-@interface ViewController : UIViewController<UIWebViewDelegate, UITextFieldDelegate>
+@interface ViewController : UIViewController<UIWebViewDelegate, UITextFieldDelegate, NJKWebViewProgressDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *headBarView;
 @property (weak, nonatomic) IBOutlet UITextField *urlAddress;

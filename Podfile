@@ -6,6 +6,7 @@ platform :ios, '8.0'
 target 'QRCodeBrower' do
 
 pod 'ZBarSDK', '~> 1.3.1'
+pod 'NJKWebViewProgress', '~> 0.2.3'
 
 end
 
