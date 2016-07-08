@@ -1,3 +1,5 @@
- * Using ZBar
- * Sample demo for QRCode
- * Get Url and go
+####Simple demo for web browser
+
+ * support QRCode
+ * using UIWebView
+ * using NJKWebViewProgress
